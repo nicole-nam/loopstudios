@@ -24,6 +24,9 @@ body {
   -ms-grid-rows: min-content 40vw (min-content)[2];
       grid-template-rows: -webkit-min-content 40vw repeat(2, -webkit-min-content);
       grid-template-rows: min-content 40vw repeat(2, min-content);
+  -ms-grid-columns: 1fr (minmax(min-content, 14rem))[4] 1fr;
+      grid-template-columns: 1fr repeat(4, minmax(-webkit-min-content, 14rem)) 1fr;
+      grid-template-columns: 1fr repeat(4, minmax(min-content, 14rem)) 1fr;
 }
 
 .about__pictures {
