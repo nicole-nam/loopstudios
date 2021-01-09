@@ -12,4 +12,37 @@ html {
           box-sizing: border-box;
   font-size: 62.5%;
 }
+
+body {
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: min-content 40vw (min-content)[2];
+      grid-template-rows: -webkit-min-content 40vw repeat(2, -webkit-min-content);
+      grid-template-rows: min-content 40vw repeat(2, min-content);
+}
+
+.about__pictures {
+  background-color: lightblue;
+}
+
+.about__content {
+  background-color: lightseagreen;
+}
+
+.footer {
+  background-color: lightgoldenrodyellow;
+}
+
+.gallery {
+  background-color: lightcoral;
+}
+
+.header {
+  background-color: pink;
+}
 /*# sourceMappingURL=main.css.map */

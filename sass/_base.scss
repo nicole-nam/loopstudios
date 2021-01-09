@@ -1,0 +1,29 @@
+//COLORS
+$color-white: hsl(0, 0%, 100%);
+$color-black: hsl(0, 0%, 0%);
+$color-dark-gray: hsl(0, 0%, 55%);
+$color-darker-gray: hsl(0, 0%, 41%);
+
+//RESETS
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 10px
+}
+
+body {
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: min-content 40vw repeat(2, min-content);
+}
