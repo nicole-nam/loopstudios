@@ -15,7 +15,8 @@ html {
 
 body {
   font-size: 1.5rem;
-  line-height: 1.5;
+  line-height: 1;
+  background-color: white;
 }
 
 .container {
@@ -24,28 +25,79 @@ body {
   -ms-grid-rows: min-content 40vw (min-content)[2];
       grid-template-rows: -webkit-min-content 40vw repeat(2, -webkit-min-content);
       grid-template-rows: min-content 40vw repeat(2, min-content);
-  -ms-grid-columns: 1fr (minmax(min-content, 14rem))[4] 1fr;
-      grid-template-columns: 1fr repeat(4, minmax(-webkit-min-content, 14rem)) 1fr;
-      grid-template-columns: 1fr repeat(4, minmax(min-content, 14rem)) 1fr;
+  -ms-grid-columns: [full-start] minmax(6rem, 1fr) [center-start] ([col-start] minmax(min-content, 30rem) [col-end])[4] [center-end] minmax(6rem, 1fr) [full-end];
+      grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(4, [col-start] minmax(-webkit-min-content, 30rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+      grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(4, [col-start] minmax(min-content, 30rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
 }
 
-.about__pictures {
-  background-color: lightblue;
+.about {
+  grid-column: center-start / center-end;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1fr)[8];
+      grid-template-rows: repeat(8, 1fr);
+  -ms-grid-columns: (1fr)[8];
+      grid-template-columns: repeat(8, 1fr);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about__img {
+  width: 120%;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-column: 1 / span 4;
+  grid-row: 1 / -1;
 }
 
 .about__content {
-  background-color: lightseagreen;
+  background-color: white;
+  grid-column: 5 / -1;
+  grid-row: 3 / -1;
+  padding: 9rem;
 }
 
 .footer {
   background-color: lightgoldenrodyellow;
+  grid-column: full-start / full-end;
 }
 
 .gallery {
   background-color: lightcoral;
+  grid-column: center-start / center-end;
 }
 
 .header {
   background-color: pink;
+  grid-column: full-start / full-end;
+}
+
+.heading-2 {
+  text-transform: uppercase;
+  font-family: "Alata", sans-serif;
+  font-size: 4rem;
+  font-weight: 400;
+  letter-spacing: 0.3rem;
+  color: dimgray;
+}
+
+.story__text {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: #8c8c8c;
+}
+
+.mb-sm {
+  margin-bottom: 2rem;
+}
+
+.mb-med {
+  margin-bottom: 4rem;
+}
+
+.mb-large {
+  margin-bottom: 6rem;
 }
 /*# sourceMappingURL=main.css.map */

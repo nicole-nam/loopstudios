@@ -4,6 +4,9 @@ $color-black: hsl(0, 0%, 0%);
 $color-dark-gray: hsl(0, 0%, 55%);
 $color-darker-gray: hsl(0, 0%, 41%);
 
+//FONTS
+$font-primary: "Alata", sans-serif;
+$font-secondary: "Josefin Sans", sans-serif;
 //RESETS
 *,
 *::before,
@@ -20,11 +23,18 @@ html {
 
 body {
   font-size: 1.5rem;
-  line-height: 1.5;
+  line-height: 1;
+
+  background-color: $color-white;
 }
 
 .container {
   display: grid;
   grid-template-rows: min-content 40vw repeat(2, min-content);
-  grid-template-columns: 1fr repeat(4, minmax(min-content, 14rem)) 1fr;
+  grid-template-columns:
+    [full-start]minmax(6rem, 1fr) [center-start]repeat(
+      4,
+      [col-start] minmax(min-content, 30rem) [col-end]
+    )
+    [center-end] minmax(6rem, 1fr) [full-end];
 }

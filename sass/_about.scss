@@ -1,9 +1,24 @@
 .about {
-  &__pictures {
-    background-color: lightblue;
+  grid-column: center-start / center-end;
+
+  display: grid;
+  grid-template-rows: repeat(8, 1fr);
+  grid-template-columns: repeat(8,1fr);
+align-items: center;
+
+  &__img {
+  width: 120%;
+  grid-column: 1 / span 4;
+  grid-row: 1 / -1;
+
   }
 
   &__content {
-    background-color: lightseagreen;
+    background-color: $color-white;
+    grid-column: 5 / -1;
+    grid-row: 3 / -1;
+
+    padding: 9rem;
+
   }
 }
