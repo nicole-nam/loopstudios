@@ -1,14 +1,21 @@
-.heading-1 {
-}
-.heading-2 {
+%heading {
   text-transform: uppercase;
   font-family: $font-primary;
-  font-size: 4rem;
   font-weight: 400;
   letter-spacing: 0.3rem;
   color: $color-darker-gray;
 }
+
+.heading-1 {
+}
+.heading-2 {
+  @extend %heading;
+  font-size: 4rem;
+}
 .heading-3 {
+  @extend %heading;
+  font-size: 3rem;
+  color: $color-white
 }
 .story__text {
   font-family: $font-secondary;
@@ -17,13 +24,13 @@
   color: $color-dark-gray;
 }
 
-//MARGIN HELPER CLASSES
-.mb-sm {
-  margin-bottom: 2rem;
+//MARGIN TOP HELPER CLASSES
+.mt-sm {
+  margin-top: 4rem;
 }
-.mb-med {
-  margin-bottom: 4rem;
+.mt-med {
+  margin-top: 6rem;
 }
-.mb-large{
-    margin-bottom: 6rem;
+.mt-large {
+  margin-top: 20rem;
 }

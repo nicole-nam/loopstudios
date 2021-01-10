@@ -2,23 +2,23 @@
   grid-column: center-start / center-end;
 
   display: grid;
-  grid-template-rows: repeat(8, 1fr);
-  grid-template-columns: repeat(8,1fr);
-align-items: center;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(8, 1fr);
+  align-items: flex-end;
 
   &__img {
-  width: 120%;
-  grid-column: 1 / span 4;
-  grid-row: 1 / -1;
+    width: 120%;
+    grid-column: 1 / span 4;
+    grid-row: 1 / -1;
 
+    border: 2px solid white;
   }
 
   &__content {
     background-color: $color-white;
     grid-column: 5 / -1;
-    grid-row: 3 / -1;
+    grid-row: 5/ -1;
 
-    padding: 9rem;
-
+    padding: 8rem 0 0 8rem;
   }
 }

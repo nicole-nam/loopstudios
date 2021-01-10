@@ -34,13 +34,13 @@ body {
   grid-column: center-start / center-end;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: (1fr)[8];
-      grid-template-rows: repeat(8, 1fr);
+  -ms-grid-rows: (1fr)[5];
+      grid-template-rows: repeat(5, 1fr);
   -ms-grid-columns: (1fr)[8];
       grid-template-columns: repeat(8, 1fr);
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 .about__img {
@@ -49,13 +49,14 @@ body {
   -ms-grid-column-span: 4;
   grid-column: 1 / span 4;
   grid-row: 1 / -1;
+  border: 2px solid white;
 }
 
 .about__content {
   background-color: white;
   grid-column: 5 / -1;
-  grid-row: 3 / -1;
-  padding: 9rem;
+  grid-row: 5/ -1;
+  padding: 8rem 0 0 8rem;
 }
 
 .footer {
@@ -64,8 +65,60 @@ body {
 }
 
 .gallery {
-  background-color: lightcoral;
   grid-column: center-start / center-end;
+}
+
+.gallery__container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  row-gap: 4rem;
+  -webkit-column-gap: 4rem;
+          column-gap: 4rem;
+}
+
+.gallery__image {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+}
+
+.gallery__image img {
+  width: 100%;
+  grid-column: 1 / -1;
+  grid-row: 1/ -1;
+}
+
+.gallery__image h3 {
+  grid-column: 1 / -1;
+  grid-row: 2/ -1;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  padding: 3rem;
+}
+
+.gallery__heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.button {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  padding: 1.5rem 5rem;
+  font-family: "Alata", sans-serif;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
 }
 
 .header {
@@ -73,13 +126,21 @@ body {
   grid-column: full-start / full-end;
 }
 
-.heading-2 {
+.heading-2, .heading-3 {
   text-transform: uppercase;
   font-family: "Alata", sans-serif;
-  font-size: 4rem;
   font-weight: 400;
   letter-spacing: 0.3rem;
   color: dimgray;
+}
+
+.heading-2 {
+  font-size: 4rem;
+}
+
+.heading-3 {
+  font-size: 3rem;
+  color: white;
 }
 
 .story__text {
@@ -89,15 +150,15 @@ body {
   color: #8c8c8c;
 }
 
-.mb-sm {
-  margin-bottom: 2rem;
+.mt-sm {
+  margin-top: 4rem;
 }
 
-.mb-med {
-  margin-bottom: 4rem;
+.mt-med {
+  margin-top: 6rem;
 }
 
-.mb-large {
-  margin-bottom: 6rem;
+.mt-large {
+  margin-top: 20rem;
 }
 /*# sourceMappingURL=main.css.map */
