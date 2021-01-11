@@ -15,7 +15,7 @@
       [col-start] minmax(min-content, 30rem) [col-end]
     )
     [center-end] minmax(6rem, 1fr) [full-end];
-  gap: 5rem;
+  row-gap: 5rem;
 
   &__logo {
     grid-column: 2 / 3;

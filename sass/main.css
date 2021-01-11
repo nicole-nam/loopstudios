@@ -238,7 +238,7 @@ body {
   -ms-grid-columns: [full-start] minmax(6rem, 1fr) [center-start] ([col-start] minmax(min-content, 30rem) [col-end])[4] [center-end] minmax(6rem, 1fr) [full-end];
       grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(4, [col-start] minmax(-webkit-min-content, 30rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
       grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(4, [col-start] minmax(min-content, 30rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
-  gap: 5rem;
+  row-gap: 5rem;
 }
 
 .header__logo {
@@ -273,7 +273,6 @@ body {
   padding: 3rem;
   border: 1px solid white;
   font-size: 5rem;
-  width: 130%;
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2 / 3;
