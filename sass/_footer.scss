@@ -1,4 +1,7 @@
 .footer {
+  @media only screen and(max-width:$bp-xs) {
+    text-align: center;
+  }
   background-color: $color-black;
   grid-column: full-start / full-end;
 
@@ -11,8 +14,19 @@
     [center-end] minmax(6rem, 1fr) [full-end];
   grid-template-rows: repeat(2, 1fr);
 
+  @media only screen and(max-width:$bp-xs) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 15rem;
+  }
+
   &__logo {
     grid-column: 2 /3;
+
+    @media only screen and(max-width:$bp-xs) {
+      grid-column: 1/-1;
+      padding-top: 3rem;
+      justify-self: center;
+    }
   }
   &__nav {
     grid-column: 2 /3;
@@ -21,6 +35,11 @@
 
     display: flex;
     gap: 2rem;
+
+    @media only screen and(max-width:$bp-xs) {
+      grid-column: 1/-1;
+      flex-direction: column;
+    }
   }
 
   &__link {
@@ -49,6 +68,11 @@
 
     display: flex;
     gap: 2rem;
+
+    @media only screen and(max-width:$bp-xs) {
+      grid-column: 1/ -1;
+      justify-self: center;
+    }
   }
   &__icon {
     fill: $color-white;
@@ -59,7 +83,7 @@
     transition: all 0.3s;
 
     &:hover {
-      padding-bottom: .5rem;
+      padding-bottom: 0.5rem;
       border-bottom: 2px solid $color-white;
     }
   }
@@ -70,5 +94,16 @@
     grid-row: 2 / -1;
 
     justify-self: flex-end;
+
+    @media only screen and(max-width:$bp-sm) {
+      font-size: 1rem;
+    }
+
+    @media only screen and(max-width:$bp-xs) {
+      grid-column: 1/-1;
+      grid-row: 4/5;
+      justify-self: center;
+      font-size: 2rem;
+    }
   }
 }

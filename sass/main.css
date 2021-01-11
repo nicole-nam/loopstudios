@@ -106,10 +106,34 @@ body {
       grid-template-rows: repeat(2, 1fr);
 }
 
+@media only screen and (max-width: 31.25em) {
+  .footer {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 31.25em) {
+  .footer {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 15rem;
+        grid-template-rows: 15rem;
+  }
+}
+
 .footer__logo {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2 /3;
+}
+
+@media only screen and (max-width: 31.25em) {
+  .footer__logo {
+    grid-column: 1/-1;
+    padding-top: 3rem;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
 }
 
 .footer__nav {
@@ -121,6 +145,16 @@ body {
   display: -ms-flexbox;
   display: flex;
   gap: 2rem;
+}
+
+@media only screen and (max-width: 31.25em) {
+  .footer__nav {
+    grid-column: 1/-1;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .footer__link {
@@ -153,6 +187,14 @@ body {
   gap: 2rem;
 }
 
+@media only screen and (max-width: 31.25em) {
+  .footer__icons {
+    grid-column: 1/ -1;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+}
+
 .footer__icon {
   fill: white;
   height: 2.5rem;
@@ -165,7 +207,7 @@ body {
 }
 
 .footer__icon:hover {
-  padding-bottom: .5rem;
+  padding-bottom: 0.5rem;
   border-bottom: 2px solid white;
 }
 
@@ -178,6 +220,24 @@ body {
   justify-self: flex-end;
 }
 
+@media only screen and (max-width: 43.75em) {
+  .footer p {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 31.25em) {
+  .footer p {
+    grid-column: 1/-1;
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4/5;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    font-size: 2rem;
+  }
+}
+
 .gallery {
   grid-column: center-start / center-end;
 }
@@ -187,7 +247,7 @@ body {
     padding-top: 40rem;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-    gap: 6rem;
+    gap: 3rem;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: start;
@@ -252,12 +312,11 @@ body {
   transition: all 0.3s ease-in;
 }
 
-@media only screen and (max-width: 56.25em) {
+@media only screen and (max-width: 43.75em) {
   .gallery__image h3 {
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 1;
-    grid-row: 1/ 2;
-    font-size: 2rem;
+    grid-row: 1/ -1;
+    font-size: 3rem;
+    padding-right: 30rem;
   }
 }
 

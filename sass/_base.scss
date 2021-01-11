@@ -9,6 +9,7 @@ $font-primary: "Alata", sans-serif;
 $font-secondary: "Josefin Sans", sans-serif;
 
 //BREAKPOINTS
+$bp-xs: 31.25em; //500px
 $bp-sm: 43.75em; //700px
 $bp-med: 56.25em; // 900px
 
@@ -46,4 +47,6 @@ body {
       [col-start] minmax(min-content, 30rem) [col-end]
     )
     [center-end] minmax(6rem, 1fr) [full-end];
+
+    
 }
