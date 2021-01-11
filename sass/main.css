@@ -397,13 +397,18 @@ body {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2 / 3;
-  z-index: 5000;
 }
 
 @media only screen and (max-width: 31.25em) {
   .header__logo {
     grid-column: 2/-1;
   }
+}
+
+.header__logo--menu {
+  position: absolute;
+  top: -13%;
+  padding-left: 6rem;
 }
 
 .header__nav {
@@ -442,6 +447,7 @@ body {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2 / 3;
+  margin-top: 15rem;
 }
 
 @media only screen and (max-width: 43.75em) {
