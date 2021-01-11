@@ -1,6 +1,8 @@
 .gallery {
   grid-column: center-start / center-end;
 
+  position: relative;
+
   @media only screen and(max-width:$bp-sm) {
     padding-top: 40rem;
     grid-template-columns: 1fr;
@@ -66,6 +68,10 @@
   &__heading {
     display: flex;
     justify-content: space-between;
+
+    @media only screen and(max-width:$bp-sm) {
+      flex-direction: column;
+    }
   }
 }
 
@@ -84,5 +90,11 @@
   &:hover {
     color: $color-white;
     background-color: $color-black;
+  }
+
+  @media only screen and(max-width:$bp-sm) {
+    align-self: center;
+    position: absolute;
+    top: 103%;
   }
 }

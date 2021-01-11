@@ -30,8 +30,8 @@
   }
   &__nav {
     grid-column: 2 /3;
-
     grid-row: 2 / -1;
+    margin-top: 4rem;
 
     display: flex;
     gap: 2rem;
@@ -39,6 +39,7 @@
     @media only screen and(max-width:$bp-xs) {
       grid-column: 1/-1;
       flex-direction: column;
+      margin-top: 0;
     }
   }
 
