@@ -74,7 +74,7 @@ body {
     grid-row: 1;
     grid-column: 1/ -1;
     width: 100%;
-    padding-top: 10rem;
+    padding-top: 100px;
   }
 }
 
@@ -386,11 +386,24 @@ body {
   row-gap: 5rem;
 }
 
+@media only screen and (max-width: 31.25em) {
+  .header {
+    -ms-grid-columns: minmax(4rem, 1fr) auto minmax(0, 1fr) minmax(4rem, 1fr);
+        grid-template-columns: minmax(4rem, 1fr) auto minmax(0, 1fr) minmax(4rem, 1fr);
+  }
+}
+
 .header__logo {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2 / 3;
   z-index: 5000;
+}
+
+@media only screen and (max-width: 31.25em) {
+  .header__logo {
+    grid-column: 2/-1;
+  }
 }
 
 .header__nav {
@@ -434,6 +447,7 @@ body {
 @media only screen and (max-width: 43.75em) {
   .heading-1 {
     width: 100%;
+    font-size: 3rem;
   }
 }
 

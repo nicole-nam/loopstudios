@@ -16,14 +16,13 @@
     width: 120%;
     grid-column: 1 / span 4;
     grid-row: 1 / -1;
-
     border: 2px solid white;
 
     @media only screen and(max-width:$bp-sm) {
       grid-row: 1;
       grid-column: 1/ -1;
       width: 100%;
-      padding-top: 10rem;
+      padding-top: 100px;
     }
   }
 
