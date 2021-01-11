@@ -336,6 +336,12 @@ body {
   margin-top: 20rem;
 }
 
+@media only screen and (max-width: 43.75em) {
+  .navigation {
+    display: block;
+  }
+}
+
 .navigation__checkbox {
   display: none;
 }
@@ -347,6 +353,45 @@ body {
   height: 7rem;
   width: 7rem;
   cursor: pointer;
+}
+
+.navigation__list {
+  list-style: none;
+  -webkit-text-emphasis: center;
+          text-emphasis: center;
+  position: absolute;
+}
+
+.navigation__background {
+  height: 6rem;
+  width: 6rem;
+  position: fixed;
+  top: 6.5rem;
+  right: 6.5rem;
+  background-color: black;
+  z-index: 1000;
+}
+
+.navigation__nav {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1500;
+  opacity: 0;
+  width: 0%;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+}
+
+.navigation__link:link, .navigation__link:visited {
+  display: inline-block;
+  font-size: 3rem;
+  font-family: "Alata", sans-serif;
+  letter-spacing: 2px;
+  line-height: 2;
+  color: white;
+  text-decoration: none;
 }
 
 .navigation__icon {
@@ -361,11 +406,35 @@ body {
   display: inline-block;
 }
 
+.navigation__icon::before, .navigation__icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
 .navigation__icon::before {
   top: -0.8rem;
 }
 
-.navigation__icon::After {
-  top: .8rem;
+.navigation__icon::after {
+  top: 0.8rem;
+}
+
+.navigation__checkbox:checked ~ .navigation__button .navigation__icon {
+  background-color: transparent;
+}
+
+.navigation__checkbox:checked ~ .navigation__button .navigation__icon::before {
+  top: 0;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+.navigation__checkbox:checked ~ .navigation__button .navigation__icon::after {
+  top: 0;
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
 }
 /*# sourceMappingURL=main.css.map */

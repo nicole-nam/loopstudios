@@ -1,16 +1,60 @@
 .navigation {
+  @media only screen and(max-width:$bp-sm) {
+    display: block;
+  }
+
   &__checkbox {
     display: none;
   }
 
-  &__button{
-      position:fixed;
-      top: 2rem;
-      right: 2rem;
-      height: 7rem;
-      width: 7rem;
-      cursor: pointer;
+  &__button {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    height: 7rem;
+    width: 7rem;
+    cursor: pointer;
+  }
 
+  &__list {
+    list-style: none;
+    text-emphasis: center;
+
+    position: absolute;
+  }
+
+  &__background {
+    height: 6rem;
+    width: 6rem;
+    position: fixed;
+    top: 6.5rem;
+    right: 6.5rem;
+    background-color: black;
+    z-index: 1000;
+  }
+
+  &__nav {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1500;
+    opacity: 0;
+    width: 0%;
+    transition: all 0.8s;
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      display: inline-block;
+      font-size: 3rem;
+      font-family: $font-primary;
+      letter-spacing: 2px;
+      line-height: 2;
+      color: $color-white;
+      text-decoration: none;
+    }
   }
 
   //icon
@@ -26,11 +70,32 @@
       display: inline-block;
     }
 
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: all 0.5s;
+    }
+
     &::before {
       top: -0.8rem;
     }
-    &::After{
-        top: .8rem;
+    &::after {
+      top: 0.8rem;
     }
+  }
+
+  &__checkbox:checked ~ &__button &__icon {
+    background-color: transparent;
+  }
+
+  &__checkbox:checked ~ &__button &__icon::before {
+    top: 0;
+    transform: rotate(135deg);
+  }
+  &__checkbox:checked ~ &__button &__icon::after {
+    top: 0;
+    transform: rotate(-135deg);
   }
 }
