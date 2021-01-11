@@ -15,10 +15,8 @@
   width: 137%;
   grid-column: 2 / 3;
 
-
-  @media only screen and(max-width:$bp-sm){
-
-    
+  @media only screen and(max-width:$bp-sm) {
+width: 100%;
   }
 }
 
