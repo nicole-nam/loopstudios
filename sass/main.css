@@ -13,6 +13,12 @@ html {
   font-size: 62.5%;
 }
 
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+
 body {
   font-size: 1.5rem;
   line-height: 1;
@@ -157,6 +163,16 @@ body {
           column-gap: 4rem;
 }
 
+@media only screen and (max-width: 56.25em) {
+  .gallery__container {
+    -ms-grid-columns: (minmax(13rem, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+    row-gap: 2rem;
+    -webkit-column-gap: 2rem;
+            column-gap: 2rem;
+  }
+}
+
 .gallery__image {
   display: -ms-grid;
   display: grid;
@@ -172,8 +188,8 @@ body {
   grid-row: 1/ -1;
   cursor: pointer;
   z-index: 0;
-  -webkit-transition: all .3s ease-in;
-  transition: all .3s ease-in;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
 }
 
 .gallery__image img:hover {
@@ -191,8 +207,17 @@ body {
       align-self: flex-end;
   padding: 3rem;
   z-index: 1;
-  -webkit-transition: all .3s ease-in;
-  transition: all .3s ease-in;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .gallery__image h3 {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/ 2;
+    font-size: 2rem;
+  }
 }
 
 .gallery__heading {
@@ -214,8 +239,8 @@ body {
   text-transform: uppercase;
   letter-spacing: 1rem;
   cursor: pointer;
-  -webkit-transition: all .3s ease-in;
-  transition: all .3s ease-in;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
 }
 
 .button:hover {

@@ -9,6 +9,12 @@
     ); //responsive without media query
     row-gap: 4rem;
     column-gap: 4rem;
+
+    @media only screen and(max-width:$bp-med) {
+      grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+      row-gap: 2rem;
+      column-gap: 2rem;
+    }
   }
 
   &__image {
@@ -22,13 +28,13 @@
       grid-row: 1/ -1;
       cursor: pointer;
       z-index: 0;
-      transition: all .3s ease-in; 
+      transition: all 0.3s ease-in;
 
       &:hover {
         opacity: 0.2;
       }
 
-      &:hover + h3{
+      &:hover + h3 {
         color: $color-black;
       }
     }
@@ -39,8 +45,13 @@
       align-self: flex-end;
       padding: 3rem;
       z-index: 1;
-      transition: all .3s ease-in; 
+      transition: all 0.3s ease-in;
 
+      @media only screen and(max-width:$bp-med) {
+        grid-row: 1/ 2;
+        font-size: 2rem;
+
+      }
     }
   }
 
@@ -60,7 +71,7 @@
   text-transform: uppercase;
   letter-spacing: 1rem;
   cursor: pointer;
-  transition: all .3s ease-in;
+  transition: all 0.3s ease-in;
 
   &:hover {
     color: $color-white;
