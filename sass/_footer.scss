@@ -59,14 +59,8 @@
     transition: all 0.3s;
 
     &:hover {
-      &::after {
-        content: "";
-        display: block;
-        margin: 0 auto;
-        width: 50%;
-        padding-top: 1rem;
-        border-bottom: 10px solid $color-white;
-      }
+      padding-bottom: .5rem;
+      border-bottom: 2px solid $color-white;
     }
   }
 
