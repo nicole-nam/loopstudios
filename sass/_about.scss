@@ -6,12 +6,25 @@
   grid-template-columns: repeat(8, 1fr);
   align-items: flex-end;
 
+  @media only screen and(max-width:$bp-sm) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    // padding-top: 15rem;
+  }
+
   &__img {
     width: 120%;
     grid-column: 1 / span 4;
     grid-row: 1 / -1;
 
     border: 2px solid white;
+
+    @media only screen and(max-width:$bp-sm) {
+      grid-row: 1;
+      grid-column: 1/ -1;
+      width: 100%;
+      padding-top: 10rem;
+    }
   }
 
   &__content {
@@ -20,5 +33,12 @@
     grid-row: 5/ -1;
 
     padding: 8rem 0 0 8rem;
+
+    @media only screen and(max-width:$bp-sm) {
+      text-align: center;
+      grid-column: 1/ -1;
+      grid-row: 2 /-1;
+      padding: 0;
+    }
   }
 }
