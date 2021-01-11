@@ -21,7 +21,17 @@
     <title>Frontend Mentor | Loopstudios landing page</title>
   </head>
   <body class="container">
-    <header class="header">HEADER</header>
+    <header class="header">
+      <img src="./images/logo.svg" alt="loopstudio logo" class="header__logo" />
+      <h1 class="heading-1">Immersive experiences that deliver</h1>
+      <ul class="header__nav">
+        <a href="#" class="footer__link"><li>About</li> </a>
+        <a href="#" class="footer__link"> <li>Careers</li></a>
+        <a href="#" class="footer__link"> <li>Events</li></a>
+        <a href="#" class="footer__link"><li>Products</li> </a>
+        <a href="#" class="footer__link"> <li>Support</li></a>
+      </ul>
+    </header>
     <section class="about">
       <img
         src="./images/desktop/image-interactive.jpg"
@@ -68,10 +78,7 @@
           <h3 class="heading-3">soccer team vr</h3>
         </div>
         <div class="gallery__image">
-          <img
-            src="./images/desktop/image-grid.jpg "
-            alt="image-grid"
-          />
+          <img src="./images/desktop/image-grid.jpg " alt="image-grid" />
           <h3 class="heading-3">the grid</h3>
         </div>
         <div class="gallery__image">
@@ -96,19 +103,43 @@
           <h3 class="heading-3">the curiosity</h3>
         </div>
         <div class="gallery__image">
-          <img
-            src="./images/desktop/image-fisheye.jpg "
-            alt="image-fisheye"
-          />
+          <img src="./images/desktop/image-fisheye.jpg " alt="image-fisheye" />
           <h3 class="heading-3">make it fisheye</h3>
         </div>
       </div>
     </section>
-    <footer class="footer">FOOTER</footer>
-    <!-- About Careers Events Products Support Immersive experiences that deliver   Our creations See all Deep
-    earth Night arcade Soccer team VR The grid From up above VR Pocket borealis
-    The curiosity Make it fisheye About Careers Events Products Support © 2021
-    Loopstudios. All rights reserved. -->
+    <footer class="footer mt-large">
+      <img
+        src="./images/logo.svg"
+        alt="loopstudio logo"
+        class="footer__logo mt-sm"
+      />
+      <ul class="footer__nav mt-sm">
+        <a href="#" class="footer__link"><li>About</li> </a>
+        <a href="#" class="footer__link"> <li>Careers</li></a>
+        <a href="#" class="footer__link"> <li>Events</li></a>
+        <a href="#" class="footer__link"><li>Products</li> </a>
+        <a href="#" class="footer__link"> <li>Support</li></a>
+      </ul>
+      <div class="footer__icons mt-sm">
+        <svg class="footer__icon">
+          <use xlink:href="./images/sprite.svg#icon-facebook2"></use>
+        </svg>
+        <svg class="footer__icon">
+          <use xlink:href="./images/sprite.svg#icon-twitter"></use>
+        </svg>
+        <svg class="footer__icon">
+          <use xlink:href="./images/sprite.svg#icon-pinterest"></use>
+        </svg>
+        <svg class="footer__icon">
+          <use xlink:href="./images/sprite.svg#icon-instagram"></use>
+        </svg>
+      </div>
+      <p class="story__text mt-sm">
+        &copy; 2021 Loopstudios. All rights reserved
+      </p>
+    </footer>
+
     <script src="./js/script.js"></script>
   </body>
 </html>

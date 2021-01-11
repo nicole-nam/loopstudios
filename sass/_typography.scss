@@ -7,7 +7,15 @@
 }
 
 .heading-1 {
+  @extend %heading;
+  color: $color-white;
+  padding: 3rem;
+  border: 1px solid $color-white;
+  font-size: 5rem;
+  width: 130%;
+  grid-column: 2 / 3;
 }
+
 .heading-2 {
   @extend %heading;
   font-size: 4rem;
@@ -15,7 +23,7 @@
 .heading-3 {
   @extend %heading;
   font-size: 3rem;
-  color: $color-white
+  color: $color-white;
 }
 .story__text {
   font-family: $font-secondary;

@@ -1,4 +1,80 @@
 .footer {
-  background-color: lightgoldenrodyellow;
+  background-color: $color-black;
   grid-column: full-start / full-end;
+
+  display: grid;
+  grid-template-columns:
+    [full-start]minmax(6rem, 1fr) [center-start]repeat(
+      4,
+      [col-start] minmax(min-content, 30rem) [col-end]
+    )
+    [center-end] minmax(6rem, 1fr) [full-end];
+  grid-template-rows: repeat(2, 1fr);
+
+  &__logo {
+    grid-column: 2 /3;
+  }
+  &__nav {
+    grid-column: 2 /3;
+
+    grid-row: 2 / -1;
+
+    display: flex;
+    gap: 2rem;
+  }
+
+  &__link {
+    text-decoration: none;
+    list-style-type: none;
+    color: $color-white;
+    font-family: $font-primary;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+      &::after {
+        content: "";
+        display: block;
+        margin: 0 auto;
+        width: 50%;
+        padding-top: 1rem;
+        border-bottom: 2px solid $color-white;
+      }
+    }
+  }
+
+  &__icons {
+    grid-column: 5/ 6;
+    justify-self: flex-end;
+
+    display: flex;
+    gap: 2rem;
+  }
+  &__icon {
+    fill: $color-white;
+    height: 2.5rem;
+    width: 2.5rem;
+    cursor: pointer;
+    box-sizing: content-box;
+    transition: all 0.3s;
+
+    &:hover {
+      &::after {
+        content: "";
+        display: block;
+        margin: 0 auto;
+        width: 50%;
+        padding-top: 1rem;
+        border-bottom: 10px solid $color-white;
+      }
+    }
+  }
+
+  p {
+    color: $color-white;
+    grid-column: 5/ 6;
+    grid-row: 2 / -1;
+
+    justify-self: flex-end;
+  }
 }
