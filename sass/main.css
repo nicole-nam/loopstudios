@@ -273,6 +273,7 @@ body {
   padding: 3rem;
   border: 1px solid white;
   font-size: 5rem;
+  width: 137%;
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2 / 3;
