@@ -29,7 +29,6 @@ html {
   @media only screen and(max-width:$bp-med) {
     font-size: 50%;
   }
-
 }
 
 body {
@@ -37,6 +36,8 @@ body {
   line-height: 1;
 
   background-color: $color-white;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .container {
@@ -49,5 +50,3 @@ body {
     )
     [center-end] minmax(6rem, 1fr) [full-end];
 }
-
-
