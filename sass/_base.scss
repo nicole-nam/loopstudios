@@ -12,6 +12,7 @@ $font-secondary: "Josefin Sans", sans-serif;
 $bp-xs: 31.25em; //500px
 $bp-sm: 43.75em; //700px
 $bp-med: 56.25em; // 900px
+$bp-lg: 106.25em; // 2000px
 
 //RESETS
 *,
@@ -36,13 +37,10 @@ body {
   line-height: 1;
 
   background-color: $color-white;
-  max-width: 1440px;
-  margin: 0 auto;
 }
 
 .container {
   display: grid;
-  grid-template-rows: min-content 40vw repeat(2, min-content);
   grid-template-columns:
     [full-start]minmax(6rem, 1fr) [center-start]repeat(
       4,

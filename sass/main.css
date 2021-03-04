@@ -23,16 +23,11 @@ body {
   font-size: 1.5rem;
   line-height: 1;
   background-color: white;
-  max-width: 1440px;
-  margin: 0 auto;
 }
 
 .container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: min-content 40vw (min-content)[2];
-      grid-template-rows: -webkit-min-content 40vw repeat(2, -webkit-min-content);
-      grid-template-rows: min-content 40vw repeat(2, min-content);
   -ms-grid-columns: [full-start] minmax(6rem, 1fr) [center-start] ([col-start] minmax(min-content, 30rem) [col-end])[4] [center-end] minmax(6rem, 1fr) [full-end];
       grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(4, [col-start] minmax(-webkit-min-content, 30rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
       grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(4, [col-start] minmax(min-content, 30rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
@@ -42,8 +37,7 @@ body {
   grid-column: center-start / center-end;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: (1fr)[5];
-      grid-template-rows: repeat(5, 1fr);
+  padding-top: 10rem;
   -ms-grid-columns: (1fr)[8];
       grid-template-columns: repeat(8, 1fr);
   -webkit-box-align: end;
@@ -55,9 +49,23 @@ body {
   .about {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-    -ms-grid-rows: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
     gap: 5rem;
+    padding-top: 0;
+  }
+}
+
+@media only screen and (min-width: 106.25em) {
+  .about {
+    -ms-grid-rows: none;
+        grid-template-rows: none;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
   }
 }
 
@@ -249,7 +257,6 @@ body {
 
 @media only screen and (max-width: 43.75em) {
   .gallery {
-    padding-top: 40rem;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     gap: 3rem;

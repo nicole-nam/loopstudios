@@ -2,14 +2,21 @@
   grid-column: center-start / center-end;
 
   display: grid;
-  grid-template-rows: repeat(5, 1fr);
+  padding-top: 10rem;
   grid-template-columns: repeat(8, 1fr);
   align-items: flex-end;
 
   @media only screen and(max-width:$bp-sm) {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr;
     gap: 5rem;
+    padding-top: 0;
+  }
+
+  @media only screen and(min-width:$bp-lg) {
+    grid-template-rows: none;
+    align-items: baseline;
+    height: min-content;
   }
 
   &__img {

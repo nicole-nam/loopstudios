@@ -4,7 +4,6 @@
   position: relative;
 
   @media only screen and(max-width:$bp-sm) {
-    padding-top: 40rem;
     grid-template-columns: 1fr;
     gap: 3rem;
     align-items: start;
